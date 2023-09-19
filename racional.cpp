@@ -1,5 +1,5 @@
 #include "racional.h"
-
+//Entrada de racionales
 Frac racional(int n, int d){
 	Frac frac;frac.num=n;frac.den=d;
 	return frac;
