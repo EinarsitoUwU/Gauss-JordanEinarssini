@@ -15,15 +15,17 @@ int r,c;
 list<double> alfa;
 list<double> result;
 list<string> vars;
-list<Frac> fracciones;
-
 string bufferTest;
-Frac bufferFrac,iwi;
+Frac bufferFrac,iwi,resultado;
 int main(){
-	iwi = racional(1, 20);
+	bufferFrac = racional(12,5);
+	bufferFrac.simple_Integers();
+	cout<<bufferFrac.returnIS()<<endl;
+	cout<<"Aproximacion es : "<<bufferFrac.aproxi()<<endl;
+	iwi = inverse_ofInt(5);
 	cout<<iwi.returnS()<<endl;
-	bufferFrac = iwi.inverse();
-	cout<<bufferFrac.returnS()<<endl;
+	resultado = plusFrac(bufferFrac, iwi);
+	cout<<resultado.returnIS()<<endl;
 	cout<<"Ingresa el numero de filas"<<endl;	
 	cin>>r;
 	cout<<"Ingresa el numero de columnas"<<endl;
@@ -31,15 +33,6 @@ int main(){
 	insertVars();
 	alfa = inserteq(c, r);
 	return 0;
-}
-//retorna la lista de las variables de la solucion
-list<double> systemeq(int rows,int columns,list<double> data){
-	list<double> sol;
-	int limit = columns;
-	for (double element : data) {
-	
-	}
-	return sol;
 }
 //var = column // eq = rows //
 //retorna la lista
